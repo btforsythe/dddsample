@@ -1,0 +1,24 @@
+rootProject.name = 'dddsample'
+include ':external:ila'
+include ':external:reporting'
+include ':external:reporting-api'
+include ':external:pathfinder'
+include ':external:pathfinder-api'
+include ':external:aggregator'
+include ':external'
+include ':tracking:booking-api'
+include ':tracking:bookingui'
+include ':tracking:core'
+include ':tracking'
+
+project(':external:ila').projectDir = "$rootDir/external/ila" as File
+project(':external:reporting').projectDir = "$rootDir/external/reporting" as File
+project(':external:reporting-api').projectDir = "$rootDir/external/reporting-api" as File
+project(':external:pathfinder').projectDir = "$rootDir/external/pathfinder" as File
+project(':external:pathfinder-api').projectDir = "$rootDir/external/pathfinder-api" as File
+project(':external:aggregator').projectDir = "$rootDir/external/aggregator" as File
+project(':external').projectDir = "$rootDir/external" as File
+project(':tracking:booking-api').projectDir = "$rootDir/tracking/booking-api" as File
+project(':tracking:bookingui').projectDir = "$rootDir/tracking/bookingui" as File
+project(':tracking:core').projectDir = "$rootDir/tracking/core" as File
+project(':tracking').projectDir = "$rootDir/tracking" as File

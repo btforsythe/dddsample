@@ -1,0 +1,17 @@
+group = 'se.citerus.dddsample.tracking'
+apply plugin: 'war'
+
+description = 'Tracking context: Booking UI'
+dependencies {
+  compile project(':tracking:booking-api')
+    compile(group: 'org.springframework', name: 'spring', version:'2.5.6') {
+exclude(module: 'commons-logging')
+    }
+    compile group: 'org.springframework', name: 'spring-webmvc', version:'2.5.6'
+    compile group: 'org.codehaus.jettison', name: 'jettison', version:'1.2'
+    runtime group: 'opensymphony', name: 'sitemesh', version:'2.3'
+    runtime group: 'taglibs', name: 'standard', version:'1.1.2'
+    runtime group: 'javax.servlet', name: 'jstl', version:'1.1.2'
+    testCompile group: 'org.springframework', name: 'spring-test', version:'2.5.6'
+    providedCompile group: 'javax.servlet', name: 'servlet-api', version:'2.5'
+}

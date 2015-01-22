@@ -1,0 +1,25 @@
+group = 'se.citerus.dddsample.external'
+apply plugin: 'war'
+
+description = 'External: Reporting context'
+dependencies {
+  compile project(':external:reporting-api')
+    compile(group: 'org.springframework', name: 'spring', version:'2.5.6') {
+exclude(module: 'commons-logging')
+    }
+    compile(group: 'org.apache.activemq', name: 'activemq-core', version:'5.2.0') {
+exclude(module: 'commons-logging')
+exclude(module: 'commons-logging-api')
+    }
+    compile group: 'org.apache.cxf', name: 'cxf-rt-transports-http', version:'2.2.7'
+    compile group: 'org.apache.cxf', name: 'cxf-rt-frontend-jaxrs', version:'2.2.7'
+    compile group: 'javax.ws.rs', name: 'jsr311-api', version:'1.0'
+    compile group: 'cglib', name: 'cglib-nodep', version:'2.2'
+    compile group: 'com.lowagie', name: 'itext', version:'2.1.7'
+    runtime group: 'commons-dbcp', name: 'commons-dbcp', version:'1.2.2'
+    runtime group: 'hsqldb', name: 'hsqldb', version:'1.8.0.7'
+    testCompile group: 'org.springframework', name: 'spring-test', version:'2.5.6'
+    testCompile(group: 'org.apache.cxf', name: 'cxf-rt-transports-http-jetty', version:'2.2.7') {
+exclude(module: 'slf4j-jdk14')
+    }
+}

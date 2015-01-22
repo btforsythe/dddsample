@@ -1,0 +1,30 @@
+group = 'se.citerus.dddsample.tracking'
+apply plugin: 'war'
+
+description = 'Tracking context: Core'
+dependencies {
+    compile group: 'org.apache.cxf', name: 'cxf-rt-frontend-jaxrs', version:'2.2.7'
+    compile group: 'org.apache.cxf', name: 'cxf-rt-frontend-jaxws', version:'2.2.7'
+    compile group: 'org.apache.cxf', name: 'cxf-rt-transports-http', version:'2.2.7'
+    compile group: 'org.apache.xbean', name: 'xbean-spring', version:'3.4.3'
+    compile(group: 'org.springframework', name: 'spring', version:'2.5.6') {
+exclude(module: 'commons-logging')
+    }
+    compile group: 'org.springframework', name: 'spring-webmvc', version:'2.5.6'
+    compile group: 'org.hibernate', name: 'hibernate-core', version:'3.3.2.GA'
+    compile group: 'org.hibernate', name: 'hibernate-annotations', version:'3.4.0.GA'
+    compile group: 'javassist', name: 'javassist', version:'3.8.0.GA'
+    compile(group: 'org.apache.activemq', name: 'activemq-core', version:'5.2.0') {
+exclude(module: 'commons-logging')
+exclude(module: 'commons-logging-api')
+    }
+    compile group: 'cglib', name: 'cglib-nodep', version:'2.2'
+  compile project(':tracking:booking-api')
+  compile project(':external:pathfinder-api')
+  compile project(':external:aggregator')
+  compile project(':external:reporting-api')
+    runtime group: 'commons-dbcp', name: 'commons-dbcp', version:'1.2.2'
+    runtime group: 'hsqldb', name: 'hsqldb', version:'1.8.0.7'
+    testCompile group: 'org.springframework', name: 'spring-test', version:'2.5.6'
+    providedCompile group: 'javax.servlet', name: 'servlet-api', version:'2.5'
+}

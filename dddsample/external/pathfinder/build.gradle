@@ -1,0 +1,10 @@
+group = 'se.citerus.dddsample.external'
+apply plugin: 'war'
+
+description = 'External: Pathfinder service'
+dependencies {
+  compile project(':external:pathfinder-api')
+    compile(group: 'org.springframework', name: 'spring-web', version:'2.5.6') {
+exclude(module: 'commons-logging')
+    }
+}

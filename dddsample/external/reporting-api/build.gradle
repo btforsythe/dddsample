@@ -1,0 +1,5 @@
+group = 'se.citerus.dddsample.external'
+description = 'External: Reporting API'
+dependencies {
+    compile group: 'javax.ws.rs', name: 'jsr311-api', version:'1.0'
+}
