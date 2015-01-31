@@ -1,8 +1,11 @@
 *.iml
 *.ipr
 *.iws
-.idea/
+
+# generated
 target/
+bin/
+build/
 
 *.class
 
@@ -19,3 +22,6 @@ target/
 .classpath
 .project
 .settings/
+
+# IDEA
+.idea/
