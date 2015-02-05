@@ -9,7 +9,7 @@ import se.citerus.dddsample.tracking.core.domain.patterns.valueobject.ValueObjec
 import java.util.Date;
 
 /**
- * Route specification. Describes where a cargo orign and destination is,
+ * Route specification. Describes where a cargo origin and destination is,
  * and the arrival deadline.
  */
 public class RouteSpecification extends ValueObjectSupport<RouteSpecification> {

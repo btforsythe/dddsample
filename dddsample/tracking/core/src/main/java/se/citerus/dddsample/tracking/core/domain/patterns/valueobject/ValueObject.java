@@ -3,7 +3,7 @@ package se.citerus.dddsample.tracking.core.domain.patterns.valueobject;
 /**
  * A tag interface used to indicate a value object.
  * 
- * TODO eliminate type parameter, sameValueAs method
+ * TODO convert to tag interface (eliminate type parameter and sameValueAs method)
  */
 public interface ValueObject<T> {
 
